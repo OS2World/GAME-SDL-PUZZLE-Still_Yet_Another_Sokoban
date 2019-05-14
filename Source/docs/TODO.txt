@@ -1,0 +1,95 @@
+
+djpuzzlegames todo
+
+MAIN:
+-----
+
+-	Quitting should ask you if you're sure etc.
+-	Per-user settings (rather use the registry on Windows, perhaps?
+	Then we get this functionality "for free". On *nix systems, we
+	get it "for free" anyway.)
+
+FRAMEWORK:
+----------
+
+-	CdjSettings should have "subsection" capability (recursive / tree structure?)
+-	Fullscreen switching problems in Windows (SDL?)
+
+SOKOBAN:
+--------
+
+-	FONT: 'R' character has some pixels coming up from next character below it
+-	Make option to not "animate" man (some people may find it distracting)
+-	Put 8x13 font back
+-	AAARGH! RELEASE MODE CRASH IF NOT RUN IN DEBUGGER! (Found m_pSurface uninitialized, maybe this?)
+-	About/Shadows/About -> asserts
+-	Add a program WM icon (make this part of GameRegistry)
+-	Check if runs properly when in 16-bit display mode
+-	Support multiple level sets
+-	FindPath stuff gets very slow in big open spaces (which doesn't usually happen
+	so maybe this isn't important?)
+-	Improve keyboard "feel" (set a flag when key goes down etc, currently, using
+	the actual keyboard repeat feels horrible)
+-	Frame rate sucks
+-	Font is ugly. Make a nice font. Make text at bottom larger; move to right.
+-	Should save immediately when you've completed a level
+-	LINUX: gcc: Sort out odd issue regarding order of initialization of
+	globals, causing game registration to fail in g_GameRegistry
+-	FUTURE: Scalable tile sets
+-	FUTURE: Record and playback of solutions, using standard file formats
+-	Returning from "about" with mouse click, click gets handled
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// FUTURE VERSIONS
+//
+/////////////////////////////////////////////////////////////////////////////
+
+SOKOBAN: FUTURE VERSIONS:
+-------------------------
+
+-	Undo feature: "bundle" undo actions
+-	Level editor
+
+FUTURE:
+-------
+
+-	Game: Hexoban
+-	Game: Brix-style game
+-	Game: Othello
+-	Game: Chess
+-	Game: Tetris
+-	Game: Five (balls / lines?)
+-	Game: Sherlock-style game
+-	Game: Supaplex; Boulderdash (gwanderer?)
+-	Game: Towers of Hanoi
+-	Game: TetraVex
+-	Game: Pipes
+-	Game: Hexx
+-	Game: solitaire thingy (not card game)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DONE
+//
+/////////////////////////////////////////////////////////////////////////////
+
+DONE: MAIN
+----------
+
+-D	Generic game registry system
+
+DONE: FRAMEWORK
+---------------
+
+-D	Saving and loading of settings isn't working
+
+DONE: SOKOBAN
+-------------
+
+-D	If you redo a sokoban level in fewer moves the new num moves is not saved
+-D	Remove background stuff
+-D	It shouldn't let you make moves if you've already won
+-D	Program is butt ugly. Need some decent sprites etc.
+-D	Have some sort of 'you win' screen when you complete a level
+-D	Allow variable sized spritesets (for larger/smaller levels etc)
